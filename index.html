@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ <script src="js/app.js"></script>
+ <script src="js/controller.js"></script>
+	<style type="text/css">
+		.sidebar{
+			background-color: #CFCDCD;
+		}
+		.filter_section{
+			border-bottom: #b5b1b1 1px solid;
+			padding-top: 10px;
+		}
+		.sidebar_label{
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.product_item{
+			padding: 10px 0;
+			border-bottom: 1px solid #ccc;
+		}
+		.row.product_item span {
+    		display: block;
+		}
+		.product_image {
+			display: flex;
+			justify-content: center;
+		}
+		.rating, .delivery_date, .price {
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<img src="logo.jpg" style="" alt="" width="200px">
+<div class="row" style="background-color: #121212; color: aliceblue; ">
+	<div class="col-9" >Total 190 results </div>
+	<div class="col-3" style="text-align: right">
+		<select name="sort">
+			<option value="">Price low to high</option>
+			<option value="">Price high to low</option>
+			<option value="">Review high to low</option>
+			<option value="">Review low to high</option>
+		</select>
+	</div>
+</div>
+<div class="row">
+  <div class="col-sm-3 sidebar">
+	<div class="filter_section"> 
+		<h4 class="sidebar_label"> Brand </h4>
+	  	<input type="checkbox" value="">LG <br>
+	  	<input type="checkbox" value="">Motorola<br>
+	  	<input type="checkbox" value="">Nokia<br>
+	  	<input type="checkbox" value="">Apple<br>
+	  	<input type="checkbox" value="">MI<br>
+	</div>
+	<div class="filter_section"> 
+		<h4 class="sidebar_label"> Price </h4>
+	  	<input type="checkbox" value="">Under ₹1,000 <br>
+	  	<input type="checkbox" value="">₹1,000 - ₹5,000<br>
+	  	<input type="checkbox" value="">₹5,000 - ₹10,000<br>
+	  	<input type="checkbox" value="">₹10,000 - ₹20,000<br>
+	  	<input type="checkbox" value="">Over ₹20,000<br>
+	</div>
+	<div class="filter_section"> 
+		<h4 class="sidebar_label"> Mobile Phone Operating System </h4>
+	  	<input type="checkbox" value="">Android <br>
+	  	<input type="checkbox" value="">iOS<br>
+	</div>
+	<div class="filter_section"> 
+		<h4 class="sidebar_label"> RAM </h4>
+	  	<input type="checkbox" value="">4GB <br>
+	  	<input type="checkbox" value="">3GB<br>
+	  	<input type="checkbox" value="">2GB<br>
+	  	<input type="checkbox" value="">1GB<br>
+	</div>
+  </div>
+  <div class="col-sm-9" ng-app="productList" ng-controller="productListCtrl">
+
+	 <div class="row product_item">
+	 	 <div class="col-sm-3 product_image">
+			 <img src="products/item1.jpg" alt="product">
+		 </div>
+	  	<div class="col-sm-9 ">
+			<h4>Redmi 8 (Onyx Black, 4GB RAM, 64GB Storage)</h4>
+			<span class="rating"> Rating</span>
+			<span class="price">₹10,999 </span>
+			<span class="delivery_date">Get it by Wednesday, November 6</span>
+
+		 </div>
+	 </div> 
+
+	 <div class="row product_item">
+			 <div class="col-sm-3 product_image">
+				 <img src="products/item1.jpg" alt="product">
+			 </div>
+			<div class="col-sm-9 ">
+				<h4>Redmi 8 (Onyx Black, 4GB RAM, 64GB Storage)</h4>
+				<span class="rating"> Rating</span>
+				<span class="price">₹10,999 </span>
+				<span class="delivery_date">Get it by Wednesday, November 6</span>
+
+			 </div>
+		 </div> 
+		 <div class="row product_item">
+			 <div class="col-sm-3 product_image">
+				 <img src="products/item1.jpg" alt="product">
+			 </div>
+			<div class="col-sm-9 ">
+				<h4>Redmi 8 (Onyx Black, 4GB RAM, 64GB Storage)</h4>
+				<span class="rating"> Rating</span>
+				<span class="price">₹10,999 </span>
+				<span class="delivery_date">Get it by Wednesday, November 6</span>
+
+			 </div>
+		 </div>
+	 <div class="row product_item">
+			 <div class="col-sm-3 product_image">
+				 <img src="products/item1.jpg" alt="product">
+			 </div>
+			<div class="col-sm-9 ">
+				<h4>Redmi 8 (Onyx Black, 4GB RAM, 64GB Storage)</h4>
+				<span class="rating"> Rating</span>
+				<span class="price">₹10,999 </span>
+				<span class="delivery_date">Get it by Wednesday, November 6</span>
+
+			 </div>
+		 </div> 
+	</div>
+</div>
+</div>
+</body>
+</html>
